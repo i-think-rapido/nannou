@@ -35,7 +35,10 @@ pub type ModelFn<Model> = Arc<dyn Fn(&App) -> Model>;
 #[macro_export]
 macro_rules! model {
     ($e:expr) => {
-        { std::sync::Arc::new($e) }
+        {
+            use std::sync::Arc;
+            Arc::new($e)
+        }
     }
 }
 
