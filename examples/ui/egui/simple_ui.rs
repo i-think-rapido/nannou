@@ -1,8 +1,9 @@
+use nannou::{model, view};
 use nannou::prelude::*;
 use nannou_egui::{self, egui, Egui};
 
 fn main() {
-    nannou::app(model).update(update).run();
+    nannou::app(model!(model)).update(view!(update)).run();
 }
 
 struct Settings {

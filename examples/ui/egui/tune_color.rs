@@ -1,3 +1,4 @@
+use nannou::{model, update};
 use nannou::prelude::*;
 use nannou_egui::{egui, Egui};
 
@@ -5,7 +6,7 @@ const WIDTH: f32 = 640.0;
 const HEIGHT: f32 = 360.0;
 
 fn main() {
-    nannou::app(model).update(update).run();
+    nannou::app(model!(model)).update(update!(update)).run();
 }
 
 struct Model {

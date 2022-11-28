@@ -1,4 +1,4 @@
-use nannou::{color::rgb_u32, rand::thread_rng};
+use nannou::{color::rgb_u32, model, rand::thread_rng, update};
 use nannou::{prelude::*, rand::prelude::SliceRandom};
 use nannou_egui::{self, egui, Egui};
 
@@ -6,7 +6,7 @@ const WIDTH: f32 = 640.0;
 const HEIGHT: f32 = 360.0;
 
 fn main() {
-    nannou::app(model).update(update).run();
+    nannou::app(model!(model)).update(update!(update)).run();
 }
 
 struct Circle {
